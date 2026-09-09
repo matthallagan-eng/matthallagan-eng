@@ -2,11 +2,11 @@
 
 Controls engineer building software for manufacturing.
 
-I work at the intersection of industrial automation, manufacturing systems, and computer vision—where plant floor problems become software problems.
+I work at the intersection of industrial automation, manufacturing systems, and computer vision which is where plant floor problems become software problems.
 
 Over the past four years, I’ve worked in food and pharmaceutical manufacturing with PLCs, SCADA, MES, industrial networks, SQL databases, and Ignition. Along the way, I found that the most interesting challenges are often not in the control system itself, but in turning manufacturing data into information people can actually use.
 
-Manufacturing generates enormous amounts of data, but much of the most valuable information never enters a database at all. It exists on labels, gauges, displays, operator panels, and products moving down a line. Cameras are inexpensive, computer vision models are powerful, and edge hardware is widely available—but building systems that are reliable enough for production is still difficult.
+Manufacturing generates enormous amounts of data, but much of the most valuable information never enters a database at all. It exists on labels, gauges, displays, operator panels, and products moving down a line. Cameras are inexpensive, computer vision models are powerful, and edge hardware is widely available but building systems that are reliable enough for production is still difficult.
 
 That gap between a proof of concept and a tool operators can trust is the problem I keep coming back to.
 
@@ -51,7 +51,7 @@ Checks include:
 * Dataset statistics and validation
 * Conversion between YOLO, COCO, and Pascal VOC formats
 
-This project came from repeatedly seeing the same pattern: in many computer vision projects, the dataset is the bottleneck—not the model.
+This project came from repeatedly seeing the same pattern: in many computer vision projects, the dataset is the bottleneck, not the model.
 
 **Tech:** Python · OpenCV · PyTorch
 
@@ -59,13 +59,13 @@ This project came from repeatedly seeing the same pattern: in many computer visi
 
 ## Professional Background
 
-Currently a Corporate Controls Engineer supporting four US manufacturing plants and leading a company-wide migration from legacy MES and shopfloor systems to Ignition.
+Currently a Corporate Controls Engineer supporting four US manufacturing plants and leading a companywide migration from legacy MES and shopfloor systems to Ignition.
 
 ---
 
 ## Computer Vision Work
 
-Built proof-of-concept systems using YOLO, OpenCV, PyTorch, and Roboflow, including:
+Built POC systems using YOLO, OpenCV, PyTorch, and Roboflow, including:
 
 * Gauge readers
 * Digital display OCR
