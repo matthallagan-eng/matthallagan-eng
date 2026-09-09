@@ -1,21 +1,93 @@
-Matthew Hallagan
+# Matthew Hallagan
 
-Controls and systems engineer. Four years in food and pharmaceutical manufacturing working with PLCs, SCADA, MES, and industrial networks, and building software around the same problems.
+Controls engineer building software for manufacturing.
 
-Most of what I work on sits where the plant floor meets the software layer. Manufacturing generates enormous amounts of data and very little of it ends up somewhere people can act on. That gap is what I find interesting.
+I work at the intersection of industrial automation, manufacturing systems, and computer vision—where plant floor problems become software problems.
 
-Lately that has pulled me toward computer vision. A lot of what plants need to know is visible on the floor and nowhere else: whether a label printed correctly, what a gauge reads, whether a part came out right. Cameras are cheap and models are good now, but getting from a working proof of concept to something a plant can actually rely on is still the hard part. That is the problem I keep coming back to.
+Over the past four years, I’ve worked in food and pharmaceutical manufacturing with PLCs, SCADA, MES, industrial networks, SQL databases, and Ignition. Along the way, I found that the most interesting challenges are often not in the control system itself, but in turning manufacturing data into information people can actually use.
 
-Projects
+Manufacturing generates enormous amounts of data, but much of the most valuable information never enters a database at all. It exists on labels, gauges, displays, operator panels, and products moving down a line. Cameras are inexpensive, computer vision models are powerful, and edge hardware is widely available—but building systems that are reliable enough for production is still difficult.
 
-FloorSight — Production monitoring and OEE analytics Upload production data or run a live simulation. Breaks OEE into availability, performance, and quality, with downtime sorted into a Pareto so you can see what to fix first. FastAPI, PostgreSQL, React, TypeScript, Docker, deployed on Railway and Vercel. Live demo
+That gap between a proof of concept and a tool operators can trust is the problem I keep coming back to.
 
-LabelLint — Dataset quality checks for computer vision (in progress) Finds the problems in an annotation set before you spend a GPU day on it. Duplicates, degenerate boxes, class imbalance, and format conversion between YOLO, COCO, and Pascal VOC. Came out of noticing that on every CV project I worked on, the dataset was the bottleneck rather than the model.
+---
 
-Background
+## Projects
 
-Currently a corporate controls engineer supporting four US manufacturing plants, leading an MES and shopfloor migration to Ignition across all four sites. Previously automation controls at Perrigo's infant formula division, where I led a $1.5M dryer control system upgrade and built a SQL-based recipe management system bridging SAP and PLC setpoints.
+### FloorSight
 
-On the vision side I have built detection and OCR proofs of concept with YOLO, OpenCV, PyTorch, and Roboflow, including an instrumentation reader that pulls values off gauges, digital displays, and stack lights and publishes them into Ignition over MQTT. Most of my time there has gone into the unglamorous parts: dataset collection and labeling, chasing false positives, and working out where edge deployment makes more sense than cloud.
+**Production monitoring and OEE analytics**
 
-Python · TypeScript · FastAPI · React · PostgreSQL · Docker · PyTorch · OpenCV · YOLO · Ignition · MQTT · PLC
+A web application for analyzing production performance using uploaded datasets or live simulations.
+
+Live Demo: https://floorsight-gamma.vercel.app/
+* Username: demo@floorsight.app
+* Password: demotest
+
+Features:
+
+* OEE breakdown into Availability, Performance, and Quality
+* Downtime Pareto analysis to identify major losses
+* Interactive dashboards and production metrics
+* FastAPI backend with PostgreSQL
+* React + TypeScript frontend
+* Dockerized deployment on Railway and Vercel
+
+**Tech:** FastAPI · PostgreSQL · React · TypeScript · Docker
+
+---
+
+### LabelLint *(In Progress)*
+
+**Dataset quality tools for computer vision**
+
+A toolkit for finding annotation issues before training models.
+
+Checks include:
+
+* Duplicate images
+* Degenerate or invalid bounding boxes
+* Class imbalance detection
+* Dataset statistics and validation
+* Conversion between YOLO, COCO, and Pascal VOC formats
+
+This project came from repeatedly seeing the same pattern: in many computer vision projects, the dataset is the bottleneck—not the model.
+
+**Tech:** Python · OpenCV · PyTorch
+
+---
+
+## Professional Background
+
+Currently a Corporate Controls Engineer supporting four US manufacturing plants and leading a company-wide migration from legacy MES and shopfloor systems to Ignition.
+
+---
+
+## Computer Vision Work
+
+Built proof-of-concept systems using YOLO, OpenCV, PyTorch, and Roboflow, including:
+
+* Gauge readers
+* Digital display OCR
+* Stack light monitoring
+* Tool and component detection
+* Vision systems publishing results into Ignition over MQTT
+
+Most of the work has been in the less glamorous but more important parts of vision systems:
+
+* Dataset collection
+* Annotation quality
+* Reducing false positives
+* Edge deployment
+* Integrating models into existing industrial systems
+
+---
+
+## Technologies
+
+**Industrial:** PLCs · Ignition · SCADA · MES · MQTT · Industrial Networks
+
+**Software:** Python · TypeScript · FastAPI · React · PostgreSQL · Docker
+
+**Computer Vision:** YOLO · OpenCV · PyTorch · Roboflow
+
