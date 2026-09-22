@@ -37,11 +37,13 @@ Features:
 
 ---
 
-### LabelLint *(In Progress)*
+### LabelLint
 
 **Dataset quality tools for computer vision**
 
 A toolkit for finding annotation issues before training models.
+
+Live Demo: https://labellint.vercel.app/
 
 Checks include:
 
