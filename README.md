@@ -18,6 +18,10 @@ The gap between a proof of concept and a tool operators can trust is the problem
 
 **A dive log that coaches you**
 
+Live Demo: https://divedebrief.up.railway.app/
+* Username: demo@divedebrief.app
+* Password: divedemo2026
+
 Repo: https://github.com/matthallagan-eng/divedebrief
 
 Upload the files from your dive computer and DiveDebrief scores how well each dive went, explains every score in plain words, and gives you one thing to work on next time.
@@ -30,9 +34,9 @@ Upload the files from your dive computer and DiveDebrief scores how well each di
 * Globe of every dive site, gear and weighting history, SAC from tank pressures, and a logbook you can group and sort
 * 57 unlockable sea creatures earned through achievements, each an editable SVG
 
-Scoring logic lives in one module per skill, is versioned so every dive is rescored when the rules change, and is tested against hand-derived synthetic profiles and pinned real dives. CI runs backend tests, frontend lint and build, and both Docker image builds on every PR.
+Scoring logic lives in one module per skill, is versioned so every dive is rescored when the rules change, and is tested against hand-derived synthetic profiles and pinned real dives. CI runs backend tests, frontend lint and build, and both Docker image builds on every PR, and every merge deploys to Railway (API, web app, Postgres, and a volume for photos).
 
-**Tech:** FastAPI · SQLAlchemy · Alembic · PostgreSQL · React · TypeScript · Vite · Tailwind · Recharts · MapLibre GL · Docker
+**Tech:** FastAPI · SQLAlchemy · Alembic · PostgreSQL · React · TypeScript · Vite · Tailwind · Recharts · MapLibre GL · Docker · Railway
 
 ---
 
