@@ -1,18 +1,42 @@
 # Matthew Hallagan
 
-Controls engineer building software for manufacturing.
+Engineer at [Overview AI](https://www.overview.ai), building AI vision systems for manufacturing.
 
-I work at the intersection of industrial automation, manufacturing systems, and computer vision which is where plant floor problems become software problems.
+I work where industrial automation, manufacturing systems, and computer vision meet: the place where plant floor problems turn into software problems.
 
-Over the past four years, I’ve worked in food and pharmaceutical manufacturing with PLCs, SCADA, MES, industrial networks, SQL databases, and Ignition. Along the way, I found that the most interesting challenges are often not in the control system itself, but in turning manufacturing data into information people can actually use.
+I spent four years in food and pharmaceutical manufacturing working with PLCs, SCADA, MES, industrial networks, SQL databases, and Ignition. The most interesting problems were rarely inside the control system. They were about turning manufacturing data into information people could actually use.
 
-Manufacturing generates enormous amounts of data, but much of the most valuable information never enters a database at all. It exists on labels, gauges, displays, operator panels, and products moving down a line. Cameras are inexpensive, computer vision models are powerful, and edge hardware is widely available but building systems that are reliable enough for production is still difficult.
+Much of the most valuable information on a plant floor never reaches a database. It lives on labels, gauges, displays, operator panels, and the products moving down the line. Cameras are cheap, vision models are powerful, and edge hardware is everywhere, but building systems reliable enough for production is still hard.
 
-That gap between a proof of concept and a tool operators can trust is the problem I keep coming back to.
+The gap between a proof of concept and a tool operators can trust is the problem I keep coming back to, and it's the problem I now work on full time at Overview AI.
 
 ---
 
-## Projects
+## Current Project
+
+### DiveDebrief
+
+**A dive log that coaches you**
+
+Repo: https://github.com/matthallagan-eng/divedebrief
+
+Upload the files from your dive computer and DiveDebrief scores how well each dive went, explains every score in plain words, and gives you one thing to work on next time.
+
+* Imports Garmin FIT and UDDF logs (Subsurface exports), deduplicated by start time
+* Scores ascent control, safety stop, buoyancy, and air efficiency from 0 to 100, each with its reason and a link to the moment on the profile that cost points
+* Shows N/A with an explanation when a skill can't be scored, instead of a made-up number
+* Rule-based debrief with a goal for your next dive, then checks how you did against it. No AI, so the advice is predictable and testable
+* Depth profiles with ascent-rate violations highlighted, plus optional graphs for heart rate, NDL, tissue loading, CNS, ppO₂, and gas density
+* Globe of every dive site, gear and weighting history, SAC from tank pressures, and a logbook you can group and sort
+* 57 unlockable sea creatures earned through achievements, each an editable SVG
+
+Scoring logic lives in one module per skill, is versioned so every dive is rescored when the rules change, and is tested against hand-derived synthetic profiles and pinned real dives. CI runs backend tests, frontend lint and build, and both Docker image builds on every PR.
+
+**Tech:** FastAPI · SQLAlchemy · Alembic · PostgreSQL · React · TypeScript · Vite · Tailwind · Recharts · MapLibre GL · Docker
+
+---
+
+## Other Projects
 
 ### FloorSight
 
@@ -24,36 +48,28 @@ Live Demo: https://floorsight-gamma.vercel.app/
 * Username: demo@floorsight.app
 * Password: demotest
 
-Features:
-
 * OEE breakdown into Availability, Performance, and Quality
 * Downtime Pareto analysis to identify major losses
 * Interactive dashboards and production metrics
-* FastAPI backend with PostgreSQL
-* React + TypeScript frontend
 * Dockerized deployment on Railway and Vercel
 
 **Tech:** FastAPI · PostgreSQL · React · TypeScript · Docker
-
----
 
 ### LabelLint
 
 **Dataset quality tools for computer vision**
 
-A toolkit for finding annotation issues before training models.
+A toolkit for finding annotation problems before they reach training.
 
 Live Demo: https://labellint.vercel.app/
 
-Checks include:
-
-* Duplicate images
+* Duplicate image detection
 * Degenerate or invalid bounding boxes
 * Class imbalance detection
 * Dataset statistics and validation
 * Conversion between YOLO, COCO, and Pascal VOC formats
 
-This project came from repeatedly seeing the same pattern: in many computer vision projects, the dataset is the bottleneck, not the model.
+Built after seeing the same pattern again and again: in most vision projects, the dataset is the bottleneck, not the model.
 
 **Tech:** Python · OpenCV · PyTorch
 
@@ -61,13 +77,17 @@ This project came from repeatedly seeing the same pattern: in many computer visi
 
 ## Professional Background
 
-Currently a Corporate Controls Engineer supporting four US manufacturing plants and leading a companywide migration from legacy MES and shopfloor systems to Ignition.
+**Overview AI** — [Title]
+Building AI-powered visual inspection systems for manufacturing.
+
+**Corporate Controls Engineer** (previous)
+Supported four US manufacturing plants and led a companywide migration from legacy MES and shopfloor systems to Ignition.
 
 ---
 
 ## Computer Vision Work
 
-Built POC systems using YOLO, OpenCV, PyTorch, and Roboflow, including:
+Built proof-of-concept systems with YOLO, OpenCV, PyTorch, and Roboflow, including:
 
 * Gauge readers
 * Digital display OCR
@@ -75,13 +95,13 @@ Built POC systems using YOLO, OpenCV, PyTorch, and Roboflow, including:
 * Tool and component detection
 * Vision systems publishing results into Ignition over MQTT
 
-Most of the work has been in the less glamorous but more important parts of vision systems:
+Most of that work was in the less glamorous but more important parts of a vision system:
 
 * Dataset collection
 * Annotation quality
 * Reducing false positives
 * Edge deployment
-* Integrating models into existing industrial systems
+* Integration with existing industrial systems
 
 ---
 
@@ -89,7 +109,6 @@ Most of the work has been in the less glamorous but more important parts of visi
 
 **Industrial:** PLCs · Ignition · SCADA · MES · MQTT · Industrial Networks
 
-**Software:** Python · TypeScript · FastAPI · React · PostgreSQL · Docker
+**Software:** Python · TypeScript · FastAPI · React · PostgreSQL · SQLAlchemy · Docker
 
 **Computer Vision:** YOLO · OpenCV · PyTorch · Roboflow
-
