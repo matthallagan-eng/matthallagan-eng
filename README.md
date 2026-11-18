@@ -77,7 +77,7 @@ Built after seeing the same pattern again and again: in most vision projects, th
 
 ## Professional Background
 
-**Overview AI** — [Title]
+**Overview AI** — [Application Controls Engineer]
 Building AI-powered visual inspection systems for manufacturing.
 
 **Corporate Controls Engineer** (previous)
